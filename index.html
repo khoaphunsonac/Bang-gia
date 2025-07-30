@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bảng giá vàng</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="header-title">Tiệm vàng MƯỜI</h1>
+    </div>
+    <div class="top-bar">
+        <!-- Admin Panel Button -->
+        <div class="admin-panel">
+            <button class="admin-btn" onclick="openModal()">⚙️ Cập nhật giá</button>
+        </div>
+        <div class="time-clock">
+            <p class="time" id="currentTime"></p>
+        </div>
+    </div>
+    <div class="body">
+        <div class="tables-container">
+            <table class="gold-price-table">
+                <thead>
+                    <tr>
+                        <th class="gold-header">Vàng nữ trang</th>
+                        <th class="buy-header">MUA VÀO</th>
+                        <th class="sell-header">BÁN RA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="gold-type" id="row1-col1">9999</td>
+                        <td class="price" id="row1-col2">9.000</td>
+                        <td class="price" id="row1-col3">9.000</td>
+                    </tr>
+                    <tr>
+                        <td class="gold-type" id="row2-col1">980</td>
+                        <td class="price" id="row2-col2">9.000</td>
+                        <td class="price" id="row2-col3">9.000</td>
+                    </tr>
+                    <tr>
+                        <td class="gold-type" id="row3-col1">680</td>
+                        <td class="price" id="row3-col2">9.000</td>
+                        <td class="price" id="row3-col3">9.000</td>
+                    </tr>
+                    <tr>
+                        <td class="gold-type" id="row4-col1">610</td>
+                        <td class="price" id="row4-col2">9.000</td>
+                        <td class="price" id="row4-col3">9.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-info-compact">
+                    <span class="footer-item">📍 Ấp 2, Thị xã Sông Đốc, Trần Văn Thời, Cà Mau</span>
+                    <span class="footer-item">📞 0888 699 567</span>
+                    <span class="footer-item">⏰ 7:00 - 18:00</span>
+                </div>
+            </div>
+
+            <div class="footer-center">
+                <div class="qr-section">
+                    <img src="./img/facebook-qr.jpg" alt="Facebook QR Code" class="qr-code-compact">
+                    <span class="qr-text">Facebook</span>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="qr-section">
+                    <img src="./img/zalo-qr.jpg" alt="Zalo QR Code" class="qr-code-compact">
+                    <span class="qr-text">Zalo</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Box for Price Update -->
+    <div id="priceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>⚙️ Cập nhật giá vàng</h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="priceUpdateForm">
+                    <div class="form-row">
+                        <input type="text" id="row1-col1-input" placeholder="Tên loại vàng">
+                        <input type="text" id="row1-col2-input" placeholder="Giá mua">
+                        <input type="text" id="row1-col3-input" placeholder="Giá bán">
+                    </div>
+                    <hr class="form-divider">
+                    <div class="form-row">
+                        <input type="text" id="row2-col1-input" placeholder="Tên loại vàng">
+                        <input type="text" id="row2-col2-input" placeholder="Giá mua">
+                        <input type="text" id="row2-col3-input" placeholder="Giá bán">
+                    </div>
+                    <hr class="form-divider">
+                    <div class="form-row">
+                        <input type="text" id="row3-col1-input" placeholder="Tên loại vàng">
+                        <input type="text" id="row3-col2-input" placeholder="Giá mua">
+                        <input type="text" id="row3-col3-input" placeholder="Giá bán">
+                    </div>
+                    <hr class="form-divider">
+                    <div class="form-row">
+                        <input type="text" id="row4-col1-input" placeholder="Tên loại vàng">
+                        <input type="text" id="row4-col2-input" placeholder="Giá mua">
+                        <input type="text" id="row4-col3-input" placeholder="Giá bán">
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-btn" onclick="closeModal()">❌ Hủy</button>
+                <button class="save-btn" onclick="saveData()">💾 Lưu thay đổi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
