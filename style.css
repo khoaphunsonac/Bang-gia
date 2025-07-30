@@ -24,7 +24,7 @@ body {
 .header {
     background: linear-gradient(90deg, #fa0f0f 40%, #ffd700 80%);
     border-bottom: 3px solid #ffd700;
-    padding: 20px 0 10px 0;
+    padding: 10px 0 5px 0;
     text-align: center;
     margin-bottom: 20px;
     box-shadow: 0 4px 16px rgba(218, 165, 32, 0.12);
@@ -40,6 +40,11 @@ body {
     text-shadow: 1px 1px 4px #8b4513, 0 2px 8px #ffd70044;
     letter-spacing: 1.5px;
 }
+
+#shop-name {
+    font-size: 100px;
+}
+
 .top-bar {
     display: flex;
     justify-content: center;
@@ -55,9 +60,19 @@ body {
     border-radius: 25px;
     box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.3);
     border: 2px solid #b8860b;
-    max-width: 700px;
+    max-width: 900px;
+    min-width: 500px;
     position: relative;
     overflow: hidden;
+}
+
+.datetime-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .time-clock::before {
@@ -93,8 +108,7 @@ body {
     letter-spacing: 1px;
     position: relative;
     z-index: 1;
-    text-align: center;
-    line-height: 1.2;
+    white-space: nowrap;
 }
 
 .time-display {
@@ -107,9 +121,7 @@ body {
     letter-spacing: 1px;
     position: relative;
     z-index: 1;
-    text-align: center;
-    line-height: 1.2;
-    margin-top: 5px;
+    white-space: nowrap;
 }
 
 .time {
@@ -398,7 +410,7 @@ body {
     }
 
     .header {
-        padding: 15px 0 8px 0;
+        padding: 8px 0 4px 0;
         margin-bottom: 15px;
     }
 
@@ -427,8 +439,13 @@ body {
     .time-clock {
         margin: 10px auto;
         padding: 8px 15px;
-        max-width: 280px;
+        max-width: 320px;
+        min-width: 280px;
         order: 1;
+    }
+
+    .datetime-display {
+        gap: 10px;
     }
 
     .time,
@@ -527,8 +544,13 @@ body {
     }
 
     .time-clock {
-        max-width: 500px;
+        max-width: 600px;
+        min-width: 400px;
         padding: 12px 25px;
+    }
+
+    .datetime-display {
+        gap: 15px;
     }
 
     .time,
@@ -539,6 +561,17 @@ body {
     .time-display {
         font-size: 34px;
     }
+
+    .date-display {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+
+    .time-display {
+        font-size: 36px;
+        letter-spacing: 1px;
+    }
+
     .tables-container {
         padding: 15px 10px;
     }
@@ -598,7 +631,12 @@ body {
     }
 
     .time-clock {
-        max-width: 700px;
+        max-width: 800px;
+        min-width: 600px;
+    }
+
+    .datetime-display {
+        gap: 20px;
     }
 
     .time,
@@ -609,6 +647,17 @@ body {
     .time-display {
         font-size: 40px;
     }
+
+    .date-display {
+        font-size: 36px;
+        letter-spacing: 1.5px;
+    }
+
+    .time-display {
+        font-size: 44px;
+        letter-spacing: 1.5px;
+    }
+
     .tables-container {
         padding: 20px;
     }
@@ -665,7 +714,7 @@ body {
     }
 
     .header {
-        padding: 30px 0 15px 0;
+        padding: 15px 0 8px 0;
     }
 
     .header-title {
@@ -674,9 +723,14 @@ body {
     }
 
     .time-clock {
-        max-width: 900px;
+        max-width: 1100px;
+        min-width: 800px;
         padding: 20px 40px;
         margin: 30px auto;
+    }
+
+    .datetime-display {
+        gap: 30px;
     }
 
     .time,
@@ -689,6 +743,17 @@ body {
         font-size: 50px;
         letter-spacing: 2px;
     }
+
+    .date-display {
+        font-size: 46px;
+        letter-spacing: 2px;
+    }
+
+    .time-display {
+        font-size: 54px;
+        letter-spacing: 2px;
+    }
+
     .admin-btn {
         font-size: 28px;
         padding: 16px 32px;

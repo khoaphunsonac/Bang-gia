@@ -10,7 +10,7 @@
 
 <body>
     <div class="header">
-        <h1 class="header-title">Tiệm vàng MƯỜI</h1>
+        <h1 class="header-title">Tiệm vàng <span id="shop-name">MƯỜI</span></h1>
     </div>
     <div class="top-bar">
         <!-- Admin Panel Button -->
@@ -18,8 +18,10 @@
             <button class="admin-btn" onclick="openModal()">⚙️ Cập nhật giá</button>
         </div>
         <div class="time-clock">
-            <div class="date-display" id="currentDate"></div>
-            <div class="time-display" id="currentTime"></div>
+            <div class="datetime-display">
+                <span class="date-display" id="currentDate"></span>
+                <span class="time-display" id="currentTime"></span>
+            </div>
         </div>
     </div>
     <div class="body">
@@ -63,7 +65,7 @@
         <div class="footer-content">
             <div class="footer-left">
                 <div class="footer-info-compact">
-                    <span class="footer-item">📍 Ấp 2, Thị xã Sông Đốc, Trần Văn Thời, Cà Mau</span>
+                    <span class="footer-item">📍 Số 35 Ấp 2, xã Sông Đốc,tỉnh Cà Mau</span>
                     <span class="footer-item">📞 0888 699 567</span>
                     <span class="footer-item">⏰ 7:00 - 18:00</span>
                 </div>
@@ -80,7 +82,6 @@
                 <div class="qr-section">
                     <img src="./img/zalo-qr.jpg" alt="Zalo QR Code" class="qr-code-compact">
                     <span class="qr-text">Zalo</span>
-
                 </div>
             </div>
         </div>

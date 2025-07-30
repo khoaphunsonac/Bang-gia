@@ -243,14 +243,9 @@ function updateCurrentTime() {
     const now = new Date();
 
     // Lấy giờ, phút, giây
-    const hours = now.getHours();
+    const hours = now.getHours().toString().padStart(2, "0");
     const minutes = now.getMinutes().toString().padStart(2, "0");
     const seconds = now.getSeconds().toString().padStart(2, "0");
-
-    // Chuyển đổi sang định dạng 12 giờ
-    const ampm = hours >= 12 ? "PM" : "AM";
-    const displayHours = hours % 12;
-    const finalHours = displayHours === 0 ? 12 : displayHours;
 
     // Lấy ngày, tháng, năm
     const day = now.getDate().toString().padStart(2, "0");
@@ -262,11 +257,11 @@ function updateCurrentTime() {
     const weekday = weekdays[now.getDay()];
 
     // Tạo icon động theo giờ
-    const timeIcon = getTimeIcon(hours);
+    const timeIcon = getTimeIcon(parseInt(hours));
 
-    // Tạo chuỗi ngày và giờ riêng biệt
+    // Tạo chuỗi ngày và giờ riêng biệt (định dạng 24 giờ)
     const dateString = `📅 ${weekday}, ${day}/${month}/${year}`;
-    const timeString = `${timeIcon} ${finalHours}:${minutes}:${seconds} ${ampm}`;
+    const timeString = `${timeIcon} ${hours}:${minutes}:${seconds}`;
 
     // Cập nhật nội dung cho cả hai elements
     const dateElement = document.getElementById("currentDate");
