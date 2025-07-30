@@ -263,11 +263,19 @@ function updateCurrentTime() {
 
     // Tạo icon động theo giờ
     const timeIcon = getTimeIcon(hours);
-    // Định dạng chuỗi hiển thị với ngày và giờ trên 2 dòng
-    const timeString = `${timeIcon} CẬP NHẬT LÚC: ${finalHours}:${minutes}:${seconds} ${ampm} \n 📅 ${weekday}, ${day}/${month}/${year}`;
 
-    // Cập nhật nội dung
+    // Tạo chuỗi ngày và giờ riêng biệt
+    const dateString = `📅 ${weekday}, ${day}/${month}/${year}`;
+    const timeString = `${timeIcon} ${finalHours}:${minutes}:${seconds} ${ampm}`;
+
+    // Cập nhật nội dung cho cả hai elements
+    const dateElement = document.getElementById("currentDate");
     const timeElement = document.getElementById("currentTime");
+
+    if (dateElement) {
+        dateElement.textContent = dateString;
+    }
+
     if (timeElement) {
         timeElement.textContent = timeString;
     }
