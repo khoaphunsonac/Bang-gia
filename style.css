@@ -707,153 +707,164 @@ body {
     .form-row input {
         font-size: 18px;
     }
-
 }
-
-/* Large Screens/TV - 1440px and above */
+/* Large Screens / TV - 1440px and above */
 @media (min-width: 1440px) {
+    body {
+        background-attachment: fixed;
+        overflow: hidden; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
+    }
+
     .banner-title {
-        font-size: 84px;
-        padding: 24px 12px;
-        letter-spacing: 3px;
+        font-size: 80px;
+        padding: 10px 0;
+        letter-spacing: 2px;
+        margin: 0;
     }
 
     .header {
-        padding: 15px 0 8px 0;
+        padding: 8px 0 5px 0;
+        margin: 0;
     }
 
     .header-title {
-        font-size: 64px;
-        letter-spacing: 2px;
+        font-size: 58px;
+        letter-spacing: 1px;
+        margin: 0; zalo
+    }
+
+    #shop-name {
+        font-size: 90px;
+    }
+
+    .top-bar {
+        margin: 5px 0;
+        padding: 0;
+        gap: 10px;
+    }
+
+    .admin-btn {
+        font-size: 24px;
+        padding: 8px 16px;
+        border-radius: 20px;
     }
 
     .time-clock {
-        max-width: 1100px;
-        min-width: 800px;
-        padding: 20px 40px;
-        margin: 30px auto;
+        max-width: 1000px;
+        padding: 10px 20px;
+        margin: 0 auto;
+        border-radius: 18px;
     }
 
     .datetime-display {
-        gap: 30px;
+        gap: 10px;
     }
 
-    .time,
     .date-display {
-        font-size: 28px;
-        letter-spacing: 2px;
+        font-size: 40px;
     }
 
     .time-display {
         font-size: 50px;
-        letter-spacing: 2px;
-    }
-
-    .date-display {
-        font-size: 46px;
-        letter-spacing: 2px;
-    }
-
-    .time-display {
-        font-size: 54px;
-        letter-spacing: 2px;
-    }
-
-    .admin-btn {
-        font-size: 28px;
-        padding: 16px 32px;
     }
 
     .tables-container {
-        padding: 30px 20px;
+        padding: 5px 0;
+        margin: 0;
     }
 
     .gold-price-table {
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        border-width: 2px;
+        box-shadow: none;
     }
 
     .gold-price-table th,
     .gold-price-table td {
-        width: 450px;
-        height: 90px;
-        border: 3px solid #b8860b;
+        width: 400px;
+        height: 60px;
+        padding: 4px;
     }
 
     .gold-header,
     .buy-header,
     .sell-header {
-        font-size: 52px;
+        font-size: 40px;
     }
 
     .price {
-        font-size: 52px;
+        font-size: 48px;
     }
 
     .gold-type {
-        font-size: 46px;
+        font-size: 42px;
     }
 
+    /* Modal */
     .modal-content {
-        width: 70%;
-        max-width: 1000px;
-        margin: 3% auto;
+        width: 60%;
+        max-width: 800px;
+        padding: 0;
     }
 
     .modal-header {
-        padding: 30px;
+        padding: 10px 20px;
     }
 
     .modal-header h2 {
-        font-size: 36px;
+        font-size: 26px;
     }
 
     .modal-body {
-        padding: 40px;
-        max-height: 500px;
+        padding: 15px;
+        max-height: 300px;
     }
 
     .form-row {
-        grid-template-columns: 200px 1fr 1fr 1fr;
-        gap: 20px;
-        margin-bottom: 25px;
+        gap: 10px;
+        margin-bottom: 10px;
     }
 
     .form-row input {
-        font-size: 20px;
-        padding: 15px 20px;
+        font-size: 16px;
+        padding: 6px 10px;
     }
 
     .modal-footer {
-        padding: 30px;
-        gap: 20px;
+        padding: 10px;
+        gap: 10px;
     }
 
     .cancel-btn,
     .save-btn {
-        font-size: 18px;
-        padding: 15px 30px;
+        font-size: 16px;
+        padding: 8px 16px;
     }
 
-    /* Footer adjustments for large screens */
+    /* Footer */
     .footer {
-        padding: 12px 40px;
+        padding: 6px 20px;
+        margin: 0;
+    }
+
+    .footer-content {
+        gap: 10px;
     }
 
     .footer-item {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .qr-code-compact {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
     }
 
     .qr-text {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .footer-copyright-compact {
-        font-size: 16px;
+        font-size: 13px;
     }
 }
 
@@ -988,5 +999,3 @@ body {
         text-align: center;
     }
 }
-
-
