@@ -55,29 +55,29 @@ async function saveData() {
         showDataLoadNotification("⏳ Đang lưu dữ liệu...", "info");
 
         // Gửi dữ liệu lên server (GitHub Pages doesn't support PHP, so we'll use localStorage)
-        // const response = await fetch("save-data.php", {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify(newData),
-        // });
+        const response = await fetch("save-data.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newData),
+        });
 
-        // if (response.ok) {
-        //     // Cập nhật dữ liệu local
-        //     currentData = newData;
-        //     updateTableData(newData);
+        if (response.ok) {
+            // Cập nhật dữ liệu local
+            currentData = newData;
+            updateTableData(newData);
 
-        //     // Đóng modal
-        //     closeModal();
+            // Đóng modal
+            closeModal();
 
-        //     // Hiển thị thông báo thành công
-        //     showDataLoadNotification("✅ Dữ liệu đã được lưu thành công!", "success");
+            // Hiển thị thông báo thành công
+            showDataLoadNotification("✅ Dữ liệu đã được lưu thành công!", "success");
 
-        //     console.log("💾 Dữ liệu đã được lưu:", newData);
-        // } else {
-        //     throw new Error("Không thể lưu dữ liệu");
-        // }
+            console.log("💾 Dữ liệu đã được lưu:", newData);
+        } else {
+            throw new Error("Không thể lưu dữ liệu");
+        }
 
         // For GitHub Pages - save to localStorage only
         localStorage.setItem("goldPriceData", JSON.stringify(newData));
