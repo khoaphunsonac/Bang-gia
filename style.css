@@ -620,7 +620,6 @@ body {
         font-size: 16px;
     }
 }
-
 /* Desktop - 1024px to 1439px */
 @media (min-width: 1024px) and (max-width: 1439px) {
     .banner-title {
@@ -708,52 +707,41 @@ body {
         font-size: 18px;
     }
 }
-/* Large Screens / TV - 1440px and above */
+/* Large Screens / TV - 1440px and above (Optimized for no scroll) */
 @media (min-width: 1440px) {
     body {
-        background-attachment: fixed;
-        overflow: hidden; \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ 
-    }
-
-    .banner-title {
-        font-size: 80px;
-        padding: 10px 0;
-        letter-spacing: 2px;
-        margin: 0;
+        overflow: hidden; /* Ngăn scroll */
     }
 
     .header {
-        padding: 8px 0 5px 0;
-        margin: 0;
+        padding: 8px 0;
+        margin-bottom: 8px;
     }
 
     .header-title {
-        font-size: 58px;
-        letter-spacing: 1px;
-        margin: 0; zalo
+        font-size: 42px;
     }
 
     #shop-name {
-        font-size: 90px;
+        font-size: 60px;
     }
 
     .top-bar {
-        margin: 5px 0;
-        padding: 0;
-        gap: 10px;
+        margin-bottom: 5px;
     }
 
     .admin-btn {
-        font-size: 24px;
-        padding: 8px 16px;
-        border-radius: 20px;
+        font-size: 18px;
+        padding: 8px 18px;
     }
 
     .time-clock {
-        max-width: 1000px;
-        padding: 10px 20px;
         margin: 0 auto;
-        border-radius: 18px;
+        padding: 10px 20px;
+        border-radius: 20px;
+        max-width: 700px;
+        min-width: 400px;
+        box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
     }
 
     .datetime-display {
@@ -761,89 +749,49 @@ body {
     }
 
     .date-display {
-        font-size: 40px;
+        font-size: 26px;
     }
 
     .time-display {
-        font-size: 50px;
+        font-size: 32px;
     }
 
     .tables-container {
-        padding: 5px 0;
-        margin: 0;
+        padding: 0;
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
     }
 
     .gold-price-table {
-        border-width: 2px;
-        box-shadow: none;
+        transform: scale(0.9);
+        transform-origin: top center;
     }
 
     .gold-price-table th,
     .gold-price-table td {
-        width: 400px;
-        height: 60px;
-        padding: 4px;
+        width: 280px;
+        height: 55px;
+        padding: 0;
     }
 
     .gold-header,
     .buy-header,
     .sell-header {
-        font-size: 40px;
+        font-size: 32px;
     }
 
     .price {
-        font-size: 48px;
+        font-size: 36px;
     }
 
     .gold-type {
-        font-size: 42px;
+        font-size: 32px;
     }
 
-    /* Modal */
-    .modal-content {
-        width: 60%;
-        max-width: 800px;
-        padding: 0;
-    }
-
-    .modal-header {
-        padding: 10px 20px;
-    }
-
-    .modal-header h2 {
-        font-size: 26px;
-    }
-
-    .modal-body {
-        padding: 15px;
-        max-height: 300px;
-    }
-
-    .form-row {
-        gap: 10px;
-        margin-bottom: 10px;
-    }
-
-    .form-row input {
-        font-size: 16px;
-        padding: 6px 10px;
-    }
-
-    .modal-footer {
-        padding: 10px;
-        gap: 10px;
-    }
-
-    .cancel-btn,
-    .save-btn {
-        font-size: 16px;
-        padding: 8px 16px;
-    }
-
-    /* Footer */
     .footer {
-        padding: 6px 20px;
-        margin: 0;
+        padding: 6px 12px;
+        margin-top: 6px;
     }
 
     .footer-content {
@@ -855,16 +803,173 @@ body {
     }
 
     .qr-code-compact {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
 
     .qr-text {
         font-size: 14px;
     }
 
-    .footer-copyright-compact {
-        font-size: 13px;
+    /* Giảm kích thước modal để hiển thị gọn trên TV */
+    .modal-content {
+        max-width: 600px;
+        padding: 0;
+    }
+
+    .modal-header h2 {
+        font-size: 22px;
+    }
+
+    .form-row input {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .save-btn,
+    .cancel-btn {
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+}
+
+/* Ultra-Large Screens / 4K TV - 1920px and above (Readable Font from Distance) */
+@media (min-width: 1920px) {
+    * {
+        margin: 0 !important;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow: hidden;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .header {
+        padding: 8px 0;
+        margin: 0;
+    }
+
+    .header-title {
+        font-size: 54px;
+    }
+
+    #shop-name {
+        font-size: 78px;
+    }
+
+    .top-bar {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .admin-btn {
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
+
+    .time-clock {
+        margin: 0 auto;
+        padding: 10px 20px;
+        max-width: 600px;
+        border-radius: 20px;
+        box-shadow: 0 3px 8px rgba(255, 215, 0, 0.3);
+    }
+
+    .datetime-display {
+        gap: 10px;
+    }
+
+    .date-display {
+        font-size: 30px;
+    }
+
+    .time-display {
+        font-size: 38px;
+    }
+
+    .tables-container {
+        margin: 0 auto;
+        padding: 0;
+        transform: scale(1.15);
+        transform-origin: top center;
+    }
+
+    .gold-price-table th,
+    .gold-price-table td {
+        width: 340px;
+        height: 80px;
+    }
+
+    /* Tăng kích thước chữ cho bảng giá */
+    .gold-header,
+    .buy-header,
+    .sell-header {
+        font-size: 40px;
+    }
+
+    .gold-type {
+        font-size: 60px;
+        color: #c70000;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .price {
+        font-size: 66px;
+        color: #d10000;
+        font-weight: 900;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .footer {
+        margin: 0;
+        padding: 8px 14px;
+        border-top: 2px solid #ffd700;
+    }
+
+    .footer-content {
+        gap: 12px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-item {
+        font-size: 18px;
+    }
+
+    .qr-code-compact {
+        width: 60px;
+        height: 60px;
+    }
+
+    .qr-text {
+        font-size: 18px;
+    }
+
+    /* Modal phù hợp 4K */
+    .modal-content {
+        max-width: 720px;
+        padding: 10px;
+        border-radius: 14px;
+    }
+
+    .modal-header h2 {
+        font-size: 26px;
+    }
+
+    .form-row input {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    .save-btn,
+    .cancel-btn {
+        font-size: 16px;
+        padding: 10px 16px;
     }
 }
 
