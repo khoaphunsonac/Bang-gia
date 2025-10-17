@@ -51,7 +51,7 @@ body {
     align-items: center;
     padding: 0 10px;
     position: relative;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
 }
 
 .time-clock {
@@ -533,91 +533,132 @@ body {
     }
 }
 
-/* Tablets - 768px to 1023px */
+/* Tablets - 768px to 1023px
+   Replaced with TV layout per user request (use TV styles for this breakpoint) */
 @media (min-width: 768px) and (max-width: 1023px) {
-    .banner-title {
-        font-size: 56px;
-        padding: 16px 8px;
+    body {
+        overflow: hidden; /* Ngăn scroll */
+    }
+
+    /* Reduce vertical spacing and paddings to avoid vertical overflow on TV */
+    .header {
+        padding: 6px 0;
+        margin-bottom: 6px;
     }
 
     .header-title {
-        font-size: 44px;
+        font-size: 33px;
+    }
+
+    #shop-name {
+        font-size: 40px;
+    }
+
+    .top-bar {
+        margin-bottom: 4px;
+    }
+
+    .admin-btn {
+        font-size: 18px;
+        padding: 10px 18px; /* smaller hit target but still usable */
     }
 
     .time-clock {
-        max-width: 600px;
-        min-width: 400px;
-        padding: 12px 25px;
+        margin: 0 auto;
+        padding: 8px 12px; /* significantly reduced */
+        border-radius: 20px;
+        max-width: 820px;
+        min-width: 420px;
+        box-shadow: 0 5px 12px rgba(255, 215, 0, 0.32);
+        max-height: calc(100vh - 160px);
     }
 
     .datetime-display {
-        gap: 15px;
-    }
-
-    .time,
-    .date-display {
-        font-size: 28px;
-    }
-
-    .time-display {
-        font-size: 34px;
+        gap: 10px;
     }
 
     .date-display {
-        font-size: 30px;
-        letter-spacing: 1px;
+        font-size: 18px;
     }
 
     .time-display {
-        font-size: 36px;
-        letter-spacing: 1px;
+        font-size: 18px;
     }
 
     .tables-container {
-        padding: 15px 10px;
+        padding: 0;
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .gold-price-table {
+        transform: scale(0.9);
+        transform-origin: top center;
     }
 
     .gold-price-table th,
     .gold-price-table td {
-        width: 250px;
-        height: 60px;
+        width: 360px; /* reduced to avoid horizontal overflow */
+        height: 80px;
+        padding: 6px 8px;
     }
 
     .gold-header,
     .buy-header,
     .sell-header {
-        font-size: 32px;
+        font-size: 40px;
     }
 
     .price {
-        font-size: 34px;
+        font-size: 56px;
     }
 
     .gold-type {
-        font-size: 28px;
+        font-size: 48px;
     }
 
-    .admin-btn {
-        font-size: 20px;
-        padding: 10px 20px;
+    .footer {
+        padding: 6px 10px;
+        margin-top: 4px;
     }
 
+    .footer-content {
+        gap: 10px;
+    }
+
+    .footer-item {
+        font-size: 14px;
+    }
+
+    .qr-code-compact {
+        width: 45px;
+        height: 45px;
+    }
+
+    .qr-text {
+        font-size: 14px;
+    }
+
+    /* Giảm kích thước modal để hiển thị gọn trên TV */
     .modal-content {
-        width: 85%;
-        max-width: 700px;
+        max-width: 560px;
+        padding: 4px 6px;
     }
 
     .modal-header h2 {
-        font-size: 26px;
-    }
-
-    .form-row {
-        grid-template-columns: 120px 1fr 1fr 1fr;
-        gap: 12px;
+        font-size: 22px;
     }
 
     .form-row input {
-        font-size: 16px;
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .save-btn,
+    .cancel-btn {
+        font-size: 14px;
+        padding: 8px 14px;
     }
 }
 /* Desktop - 1024px to 1439px */
@@ -713,35 +754,37 @@ body {
         overflow: hidden; /* Ngăn scroll */
     }
 
+    /* Reduce vertical spacing and paddings to avoid vertical overflow on TV */
     .header {
-        padding: 8px 0;
-        margin-bottom: 8px;
+        padding: 6px 0;
+        margin-bottom: 6px;
     }
 
     .header-title {
-        font-size: 42px;
+        font-size: 48px;
     }
 
     #shop-name {
-        font-size: 60px;
+        font-size: 72px;
     }
 
     .top-bar {
-        margin-bottom: 5px;
+        margin-bottom: 4px;
     }
 
     .admin-btn {
         font-size: 18px;
-        padding: 8px 18px;
+        padding: 10px 18px; /* smaller hit target but still usable */
     }
 
     .time-clock {
         margin: 0 auto;
-        padding: 10px 20px;
+        padding: 8px 12px; /* significantly reduced */
         border-radius: 20px;
-        max-width: 700px;
-        min-width: 400px;
-        box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+        max-width: 820px;
+        min-width: 420px;
+        box-shadow: 0 5px 12px rgba(255, 215, 0, 0.32);
+        max-height: calc(100vh - 160px);
     }
 
     .datetime-display {
@@ -770,28 +813,28 @@ body {
 
     .gold-price-table th,
     .gold-price-table td {
-        width: 280px;
-        height: 55px;
-        padding: 0;
+        width: 360px; /* reduced to avoid horizontal overflow */
+        height: 80px;
+        padding: 6px 8px;
     }
 
     .gold-header,
     .buy-header,
     .sell-header {
-        font-size: 32px;
+        font-size: 40px;
     }
 
     .price {
-        font-size: 36px;
+        font-size: 56px;
     }
 
     .gold-type {
-        font-size: 32px;
+        font-size: 48px;
     }
 
     .footer {
-        padding: 6px 12px;
-        margin-top: 6px;
+        padding: 6px 10px;
+        margin-top: 4px;
     }
 
     .footer-content {
@@ -813,8 +856,8 @@ body {
 
     /* Giảm kích thước modal để hiển thị gọn trên TV */
     .modal-content {
-        max-width: 600px;
-        padding: 0;
+        max-width: 560px;
+        padding: 4px 6px;
     }
 
     .modal-header h2 {
@@ -848,16 +891,16 @@ body {
     }
 
     .header {
-        padding: 8px 0;
+        padding: 6px 0;
         margin: 0;
     }
 
     .header-title {
-        font-size: 54px;
+        font-size: 48px;
     }
 
     #shop-name {
-        font-size: 78px;
+        font-size: 68px;
     }
 
     .top-bar {
@@ -867,17 +910,18 @@ body {
     }
 
     .admin-btn {
-        font-size: 20px;
-        padding: 10px 20px;
-        border-radius: 20px;
+        font-size: 18px;
+        padding: 8px 16px;
+        border-radius: 18px;
     }
 
     .time-clock {
         margin: 0 auto;
-        padding: 10px 20px;
-        max-width: 600px;
-        border-radius: 20px;
-        box-shadow: 0 3px 8px rgba(255, 215, 0, 0.3);
+        padding: 8px 12px;
+        max-width: 700px;
+        border-radius: 18px;
+        box-shadow: 0 3px 8px rgba(255, 215, 0, 0.28);
+        max-height: calc(100vh - 160px);
     }
 
     .datetime-display {
@@ -901,8 +945,9 @@ body {
 
     .gold-price-table th,
     .gold-price-table td {
-        width: 340px;
-        height: 80px;
+        width: 300px;
+        height: 70px;
+        padding: 6px 8px;
     }
 
     /* Tăng kích thước chữ cho bảng giá */
@@ -913,13 +958,13 @@ body {
     }
 
     .gold-type {
-        font-size: 60px;
+        font-size: 48px;
         color: #c70000;
         text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
     }
 
     .price {
-        font-size: 66px;
+        font-size: 56px;
         color: #d10000;
         font-weight: 900;
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
@@ -927,7 +972,7 @@ body {
 
     .footer {
         margin: 0;
-        padding: 8px 14px;
+        padding: 6px 10px;
         border-top: 2px solid #ffd700;
     }
 
@@ -952,9 +997,9 @@ body {
 
     /* Modal phù hợp 4K */
     .modal-content {
-        max-width: 720px;
-        padding: 10px;
-        border-radius: 14px;
+        max-width: 640px;
+        padding: 6px 8px;
+        border-radius: 12px;
     }
 
     .modal-header h2 {
@@ -962,14 +1007,90 @@ body {
     }
 
     .form-row input {
-        font-size: 18px;
-        padding: 8px 12px;
+        font-size: 16px;
+        padding: 6px 10px;
     }
 
     .save-btn,
     .cancel-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* Ultra HD / 4K+ TVs and wide displays */
+@media (min-width: 2560px) {
+    body {
+        overflow: hidden;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    /* Reduce some extreme sizes to fit vertically on 4K TVs */
+    .banner-title {
+        font-size: 88px;
+        padding: 18px 12px;
+    }
+
+    .header-title {
+        font-size: 56px;
+    }
+
+    #shop-name {
+        font-size: 96px;
+    }
+
+    .time-clock {
+        max-width: 1000px;
+        min-width: 560px;
+        padding: 12px 20px;
+        border-radius: 28px;
+    }
+
+    .date-display {
+        font-size: 36px;
+    }
+
+    .time-display {
+        font-size: 56px;
+    }
+
+    .time {
+        font-size: 30px;
+    }
+
+    .gold-price-table {
+        transform: scale(0.98);
+    }
+
+    .gold-price-table th,
+    .gold-price-table td {
+        width: 440px;
+        height: 110px;
+        padding: 8px 12px;
+    }
+
+    .gold-header,
+    .buy-header,
+    .sell-header {
+        font-size: 56px;
+    }
+
+    .price {
+        font-size: 80px;
+        line-height: 1;
+    }
+
+    .gold-type {
+        font-size: 68px;
+    }
+
+    .admin-btn {
+        font-size: 22px;
+        padding: 12px 18px;
+    }
+
+    .footer-item {
         font-size: 16px;
-        padding: 10px 16px;
     }
 }
 
