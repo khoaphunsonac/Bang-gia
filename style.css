@@ -26,7 +26,7 @@ body {
     border-bottom: 3px solid #ffd700;
     padding: 10px 0 5px 0;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 0; /* reset default margin */
     box-shadow: 0 4px 16px rgba(218, 165, 32, 0.12);
     border-radius: 0 0 12px 12px;
 }
@@ -51,12 +51,12 @@ body {
     align-items: center;
     padding: 0 10px;
     position: relative;
-    margin-bottom: 2px;
+    margin: 0; /* remove top-bar margin */
 }
 
 .time-clock {
     background: linear-gradient(135deg, #ffd700 0%, #ffa500 50%, #ff8c00 100%);
-    margin: 20px auto;
+    margin: 0 auto;
     padding: 15px 30px;
     border-radius: 25px;
     box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.3);
@@ -412,18 +412,21 @@ body {
 
     .header {
         padding: 8px 0 4px 0;
-        margin-bottom: 15px;
+        margin-bottom: 0; /* remove margin on mobile as well */
     }
 
     .header-title {
-        font-size: 28px;
+        font-size: 16px;
         letter-spacing: 1px;
     }
-
+    #shop-name {
+        font-size: 24px;
+    }
     .top-bar {
         flex-direction: column;
         padding: 0 5px;
         gap: 10px;
+        margin: 0; /* remove top-bar margin on mobile */
     }
 
     .admin-panel {
@@ -451,12 +454,12 @@ body {
 
     .time,
     .date-display {
-        font-size: 22px;
+        font-size: 12px;
         letter-spacing: 0.5px;
     }
 
     .time-display {
-        font-size: 28px;
+        font-size: 12px;
         letter-spacing: 0.5px;
     }
     .tables-container {
@@ -543,7 +546,7 @@ body {
     /* Reduce vertical spacing and paddings to avoid vertical overflow on TV */
     .header {
         padding: 6px 0;
-        margin-bottom: 6px;
+        margin-bottom: 0; /* ensure no margin */
     }
 
     .header-title {
@@ -555,7 +558,7 @@ body {
     }
 
     .top-bar {
-        margin-bottom: 4px;
+        margin: 0; /* remove margin */
     }
 
     .admin-btn {
@@ -683,11 +686,6 @@ body {
         gap: 20px;
     }
 
-    .time,
-    .date-display {
-        font-size: 32px;
-    }
-
     .time-display {
         font-size: 40px;
     }
@@ -757,7 +755,6 @@ body {
     /* Reduce vertical spacing and paddings to avoid vertical overflow on TV */
     .header {
         padding: 6px 0;
-        margin-bottom: 6px;
     }
 
     .header-title {
@@ -766,10 +763,6 @@ body {
 
     #shop-name {
         font-size: 72px;
-    }
-
-    .top-bar {
-        margin-bottom: 4px;
     }
 
     .admin-btn {
