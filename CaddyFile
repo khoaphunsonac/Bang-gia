@@ -1,0 +1,11 @@
+:{$PORT} {
+    root * .
+    php_fastcgi unix//run/php/php-fpm.sock
+    file_server
+    
+    header {
+        Access-Control-Allow-Origin *
+        Access-Control-Allow-Methods "GET, POST, OPTIONS"
+        Access-Control-Allow-Headers "Content-Type"
+    }
+}

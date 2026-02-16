@@ -20,14 +20,15 @@ Xem demo tại: https://yourusername.github.io/Bang-gia
 ```
 Bang-gia/
 ├── index.html          # Trang chính
-├── style.css          # CSS styling
-├── main.js            # JavaScript logic
-├── data.json          # Dữ liệu giá vàng
-├── img/               # Hình ảnh
+├── style.css           # CSS styling
+├── main.js             # JavaScript logic
+├── data.json           # Dữ liệu giá vàng
+├── save-data.php       # Lưu dữ liệu (không hoạt động trên GitHub Pages)
+├── img/                # Hình ảnh
 │   ├── golden_liquild.jpg
 │   ├── facebook-qr.png
 │   └── zalo-qr.png
-└── README.md          # Tài liệu này
+└── README.md           # Tài liệu này
 ```
 
 ## 🛠️ Cài đặt

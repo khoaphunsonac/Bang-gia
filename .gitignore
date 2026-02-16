@@ -34,8 +34,6 @@ node_modules
 ehthumbs.db
 Thumbs.db
 
-# PHP files (not needed for GitHub Pages)
-save-data.php
 
 # Local development
 .env
