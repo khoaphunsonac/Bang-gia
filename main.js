@@ -64,23 +64,13 @@ async function saveData() {
         });
 
         if (response.ok) {
-            // Cập nhật dữ liệu local
             currentData = newData;
             updateTableData(newData);
-
-            // Đóng modal
             closeModal();
-
-            // Hiển thị thông báo thành công
-            showDataLoadNotification("✅ Dữ liệu đã được lưu thành công!", "success");
-
-            console.log("💾 Dữ liệu đã được lưu:", newData);
+            showDataLoadNotification("✅ Dữ liệu đã lưu lên Server!", "success");
         } else {
-            throw new Error("Không thể lưu dữ liệu");
+            throw new Error("Server trả về lỗi 405 hoặc 500");
         }
-
-        // For GitHub Pages - save to localStorage only
-        localStorage.setItem("goldPriceData", JSON.stringify(newData));
         currentData = newData;
         updateTableData(newData);
         closeModal();
@@ -194,7 +184,9 @@ function showDataLoadNotification(message, type) {
     notification.textContent = message;
 
     const backgroundColor =
-        type === "success" ? "linear-gradient(135deg, #4CAF50, #45a049)" : "linear-gradient(135deg, #f44336, #d32f2f)";
+        type === "success"
+            ? "linear-gradient(135deg, #4CAF50, #45a049)"
+            : "linear-gradient(135deg, #f44336, #d32f2f)";
 
     notification.style.cssText = `
         position: fixed;
@@ -253,7 +245,15 @@ function updateCurrentTime() {
     const year = now.getFullYear();
 
     // Lấy thứ trong tuần
-    const weekdays = ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"];
+    const weekdays = [
+        "Chủ Nhật",
+        "Thứ Hai",
+        "Thứ Ba",
+        "Thứ Tư",
+        "Thứ Năm",
+        "Thứ Sáu",
+        "Thứ Bảy",
+    ];
     const weekday = weekdays[now.getDay()];
 
     // Tạo icon động theo giờ
