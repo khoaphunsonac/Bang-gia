@@ -2,10 +2,15 @@
     root * .
     php_fastcgi unix//run/php/php-fpm.sock
     file_server
-    
+
+    # Cấu hình Header Bảo mật và CSP
     header {
+        # Cho phép POST từ các nguồn
         Access-Control-Allow-Origin *
         Access-Control-Allow-Methods "GET, POST, OPTIONS"
         Access-Control-Allow-Headers "Content-Type"
+
+        # Sửa lỗi chặn âm thanh data:
+        Content-Security-Policy "default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; media-src 'self' https: data:;"
     }
 }
