@@ -2,6 +2,8 @@ body {
     font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    padding-bottom: 120px;
     background-image: url("img/golden_liquild.jpg");
     background-size: cover;
     background-position: center;
@@ -179,6 +181,76 @@ body {
     box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
 }
 
+.auto-update-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 12px;
+    color: #fff8dc;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-label {
+    white-space: nowrap;
+}
+
+.auto-update-toggle input {
+    display: none;
+}
+
+.toggle-slider {
+    position: relative;
+    width: 52px;
+    height: 28px;
+    background: #9b6a1b;
+    border-radius: 999px;
+    border: 2px solid #ffd700;
+    transition: background 0.3s ease;
+}
+
+.toggle-slider::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.auto-update-toggle input:checked + .toggle-slider {
+    background: #1f9d42;
+}
+
+.auto-update-toggle input:checked + .toggle-slider::before {
+    transform: translateX(24px);
+}
+
+.modal-auto-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 2px;
+}
+
+.modal-auto-label {
+    color: #8b4513;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.modal-auto-row .auto-update-toggle {
+    margin-left: 0;
+    color: #8b4513;
+    text-shadow: none;
+}
+
 /* Modal Styling */
 .modal {
     display: none;
@@ -194,11 +266,11 @@ body {
 
 .modal-content {
     background: linear-gradient(135deg, #fff8dc, #fffacd);
-    margin: 5% auto;
+    margin: 2% auto;
     padding: 0;
     border-radius: 15px;
-    width: 90%;
-    max-width: 800px;
+    width: 96%;
+    max-width: 1300px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     animation: modalSlideIn 0.3s ease;
     border: 3px solid #ffd700;
@@ -248,8 +320,8 @@ body {
 
 .modal-body {
     padding: 25px;
-    max-height: 400px;
-    overflow-y: auto;
+    max-height: none;
+    overflow: visible;
 }
 
 .form-row {
@@ -402,6 +474,7 @@ body {
 @media (max-width: 767px) {
     body {
         background-attachment: scroll;
+        padding-bottom: 180px;
     }
 
     .banner-title {
@@ -438,6 +511,17 @@ body {
     .admin-btn {
         font-size: 18px;
         padding: 8px 16px;
+    }
+
+    .auto-update-toggle {
+        margin-left: 0;
+        margin-top: 0;
+        font-size: 14px;
+        justify-content: center;
+    }
+
+    .modal-auto-label {
+        font-size: 14px;
     }
 
     .time-clock {
@@ -494,8 +578,9 @@ body {
 
     /* Modal responsive */
     .modal-content {
-        width: 95%;
-        margin: 5% auto;
+        width: 96%;
+        margin: 3% auto;
+        max-width: none;
     }
 
     .modal-header {
@@ -508,7 +593,8 @@ body {
 
     .modal-body {
         padding: 15px;
-        max-height: 300px;
+        max-height: none;
+        overflow: visible;
     }
 
     .form-row {
@@ -564,6 +650,11 @@ body {
     .admin-btn {
         font-size: 18px;
         padding: 10px 18px; /* smaller hit target but still usable */
+    }
+
+    .auto-update-toggle {
+        font-size: 16px;
+        margin-left: 8px;
     }
 
     .time-clock {
@@ -645,8 +736,9 @@ body {
 
     /* Giảm kích thước modal để hiển thị gọn trên TV */
     .modal-content {
-        max-width: 560px;
-        padding: 4px 6px;
+        width: 96%;
+        max-width: 1100px;
+        padding: 8px 10px;
     }
 
     .modal-header h2 {
@@ -729,8 +821,8 @@ body {
     }
 
     .modal-content {
-        width: 80%;
-        max-width: 800px;
+        width: 96%;
+        max-width: 1200px;
     }
 
     .modal-header h2 {
@@ -768,6 +860,10 @@ body {
     .admin-btn {
         font-size: 18px;
         padding: 10px 18px; /* smaller hit target but still usable */
+    }
+
+    .auto-update-toggle {
+        font-size: 16px;
     }
 
     .time-clock {
@@ -849,8 +945,9 @@ body {
 
     /* Giảm kích thước modal để hiển thị gọn trên TV */
     .modal-content {
-        max-width: 560px;
-        padding: 4px 6px;
+        width: 96%;
+        max-width: 1200px;
+        padding: 8px 10px;
     }
 
     .modal-header h2 {
@@ -906,6 +1003,10 @@ body {
         font-size: 18px;
         padding: 8px 16px;
         border-radius: 18px;
+    }
+
+    .auto-update-toggle {
+        font-size: 15px;
     }
 
     .time-clock {
@@ -990,8 +1091,9 @@ body {
 
     /* Modal phù hợp 4K */
     .modal-content {
-        max-width: 640px;
-        padding: 6px 8px;
+        width: 96%;
+        max-width: 1400px;
+        padding: 10px 12px;
         border-radius: 12px;
     }
 
@@ -1091,9 +1193,15 @@ body {
 .footer {
     background: linear-gradient(135deg, #8b4513, #a0522d);
     padding: 12px 20px;
-    margin-top: 16px;
+    margin-top: 0;
     border-top: 2px solid #ffd700;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1200;
 }
 
 .footer-content {

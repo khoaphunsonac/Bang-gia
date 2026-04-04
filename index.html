@@ -14,9 +14,8 @@
         <h1 class="header-title">Tiệm vàng <span id="shop-name">MƯỜI</span></h1>
     </div>
     <div class="top-bar">
-        <!-- Admin Panel Button -->
         <div class="admin-panel">
-            <button class="admin-btn" onclick="openModal()">⚙️ Cập nhật giá</button>
+            <button class="admin-btn" id="manualUpdateBtn">⚙️ Cập nhật giá</button>
         </div>
         <div class="time-clock">
             <div class="datetime-display">
@@ -88,44 +87,54 @@
         </div>
     </div>
 
-    <!-- Modal Box for Price Update -->
     <div id="priceModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>⚙️ Cập nhật giá vàng</h2>
-                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>⚙️ Cập nhật giá thủ công</h2>
+                <span class="close" id="closeModalBtn">&times;</span>
             </div>
             <div class="modal-body">
                 <form id="priceUpdateForm">
                     <div class="form-row">
-                        <input type="text" id="row1-col1-input" placeholder="Tên loại vàng">
+                        <label for="row1-col1-input">Dòng 1</label>
+                        <input type="text" id="row1-col1-input" placeholder="Loại vàng">
                         <input type="text" id="row1-col2-input" placeholder="Giá mua">
                         <input type="text" id="row1-col3-input" placeholder="Giá bán">
                     </div>
                     <hr class="form-divider">
                     <div class="form-row">
-                        <input type="text" id="row2-col1-input" placeholder="Tên loại vàng">
+                        <label for="row2-col1-input">Dòng 2</label>
+                        <input type="text" id="row2-col1-input" placeholder="Loại vàng">
                         <input type="text" id="row2-col2-input" placeholder="Giá mua">
                         <input type="text" id="row2-col3-input" placeholder="Giá bán">
                     </div>
                     <hr class="form-divider">
                     <div class="form-row">
-                        <input type="text" id="row3-col1-input" placeholder="Tên loại vàng">
+                        <label for="row3-col1-input">Dòng 3</label>
+                        <input type="text" id="row3-col1-input" placeholder="Loại vàng">
                         <input type="text" id="row3-col2-input" placeholder="Giá mua">
                         <input type="text" id="row3-col3-input" placeholder="Giá bán">
                     </div>
                     <hr class="form-divider">
                     <div class="form-row">
-                        <input type="text" id="row4-col1-input" placeholder="Tên loại vàng">
+                        <label for="row4-col1-input">Dòng 4</label>
+                        <input type="text" id="row4-col1-input" placeholder="Loại vàng">
                         <input type="text" id="row4-col2-input" placeholder="Giá mua">
                         <input type="text" id="row4-col3-input" placeholder="Giá bán">
                     </div>
-
+                    <hr class="form-divider">
+                    <div class="modal-auto-row">
+                        <span class="modal-auto-label">Tự động cập nhật giá</span>
+                        <label class="auto-update-toggle" for="autoUpdateToggle">
+                            <input type="checkbox" id="autoUpdateToggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="cancel-btn" onclick="closeModal()">❌ Hủy</button>
-                <button class="save-btn" onclick="saveData()">💾 Lưu thay đổi</button>
+                <button class="cancel-btn" id="cancelModalBtn" type="button">❌ Hủy</button>
+                <button class="save-btn" id="saveManualBtn" type="button">💾 Lưu thủ công</button>
             </div>
         </div>
     </div>
