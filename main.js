@@ -232,7 +232,7 @@ async function updatePricesFromApi({ silent = false, source = "manual" } = {}) {
 
         if (!silent) {
             const timeText = result.time ? ` (${result.time})` : "";
-            showNotification(`✅ Cập nhật giá từ API thành công${timeText}`, "success");
+            console.log(`✅ Cập nhật giá từ API thành công${timeText}`, "success");
         }
     } catch (error) {
         if (error?.name === "AbortError") {
